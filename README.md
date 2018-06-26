@@ -1,5 +1,5 @@
-# The New Stack Tutorials: Getting Legit with Git and GitHub
-# Pull Request Practice Repo
+# _The New Stack_ Tutorials: Getting Legit with Git and GitHub
+### Pull Request Practice Repo
 
 
 1. Fork this repository
