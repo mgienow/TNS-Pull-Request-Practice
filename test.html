@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Vending Analytics </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href={{css_path}}>
+  <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAb2hiAIaAewlNRDxPNiwjyDctI8NRSEBJk42IB3RtZgAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAB4cWsAtrKvA1dPRzA7MSiZMCYc4TYsIrg3LSO7MScd4DwyKZRa
+        UkostK+sAnVuaAAAAAAAAAAAAAAAAAAAAAAASD82AFNKQkEyKB7XNCogx1FJQGh9d3EWgXp0GlBH
+        P240KSDLNSsi02pjXDxYUEgAAAAAAAAAAAAAAAAAAAAAADsxKABCODBhLSIY3llQSDT6+vkO////
+        Ab25tQHd29kPV05GNzEnHeBfV1BdUUhAAAAAAAAAAAAAAAAAAAAAAAA8MikAQjgwYS0iGdhpYlss
+        8/LxBsK/vADAvboA6ennB2liWy4xJh3aX1dQXFFIQAAAAAAAAAAAAAAAAAAAAAAAPDIpAEM5MGAv
+        JBrbXVVNKgAAAADLyccAv7y5AAAAAABiWlItMykf3mBYUVtSSUEAAAAAAAAAAAD///8AAAAAAHhx
+        bA4/Ni2LLCIY3WRcVSjm5eQMx8TBDs7MyQ3p6OcLZl5XLC4kGuBLQTmFdm5oDCEVCwD///8AiYN9
+        CVBHP0Y3LSS0MSYd4kA3LpSAenQW8/PyB9fV1Ajd29oI9fX0BoeAexk/NSyYMCUb4zctJK9RSEFB
+        lI6JBzkvJqExJh3fOS8mtVZNRVGzr6wOw8C9D8PAvgHDwL4AwL26AMPAvQG7uLUQoZyYD1BHP1Y5
+        LiW5MScd3jsxKJorIRf6Rz01g6ainRz09PMH////AMG+uxDDwL0Jwr+8AMK/vADDwL0KwL26D+7v
+        7wDv7+4Iop2ZHUg+NossIhj3LiMZ9GJaUlzv7u0Mv7u5AcG9ugDEwb4EtrKvEqWgnQLa2NcDycbE
+        EsvIxQTIxcIAxcPAAf38/QxiWlNlLyQb8y0iGPZdVU1l////AtHOzAD///8AtbCtALezsAy/vLkL
+        yMXDC9jW1ArHxcIA////AM3KyAD///8CW1JLby0jGfQsIRj5S0E5b8TAvQTx8fADv7u4BP///wJ9
+        d3ASSkA4YE5FPVuDfXYQ////AsPAvQT///8DsrCsBUM6MXkrIBb4NCogyjAlHOBCODCRgHlzMb+8
+        uRZjW1NOOC4kti4kGucvJBrmOS8msWZeWErHxMEVenRtNUA2LZcwJRziNisiwmliWxpDOTFxMykf
+        0zQpIMw4LiWmMCYc3TYsI7ZORT1MTEI6UDYrIrsyJx7bOi8mpTMoH88zKB/PQzkwa25nYBhtZl8A
+        oZ6aAV1UTSw8MimgNCoh2kU7M3FuZmAUAAAAAAAAAABwaGEWRDoxdzMpH9w9MyuaXVVOKJ+clQFr
+        Y1wA+B8AAOAHAADgBwAA4AcAAOGHAADjxwAAwAMAAAAAAAABgAAACZAAAAgQAAAcOAAAAAAAAAAA
+        AAAAAAAAgYEAAA==" type="image/x-icon" />
+  <script>
+    const isIE = /*@cc_on!@*/ false || !!document.documentMode;
+    if (isIE) {
+      document.write(
+        '<link rel="stylesheet" type="text/css" href="/static/public/css/ie.css">'
+      );
+    }
+  </script>
+</head>
+
+<body>
+  <div id='app'>{% csrf_token %}</div>
+  <script src={{javascript_path}}></script>
+</body>
+
+</html>
