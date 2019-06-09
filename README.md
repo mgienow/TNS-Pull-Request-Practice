@@ -8,6 +8,8 @@
 4. Create a branch, also named FirstName-LastName (hint: _$git checkout -b Michelle-Gienow_)
 5. Open the project in your text editor (hint: _$atom ./TNS-Pull-Request-Practice_)
 6. Add some text to your html file (_May we suggest "Hello world"?_) and save
+
+
 7. Add/Commit your changes
 8. Change back to master branch
 9. Merge your newly created branch into master
