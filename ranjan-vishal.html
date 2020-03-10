@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My first Pull Request</title>
+	<style>
+		body{
+			background-color: #9c27b0ad;
+			text-align: center;
+		}
+		h1{
+			color:#c5f5ff;
+			font-size: 3em;
+			font-weight: bold;
+		}
+		button{
+			margin: 20px;
+			font-size: 30px;
+			padding: 32px 16px;
+			border: 2px solid red;
+			border-radius: 20px;
+			cursor: pointer;
+		}
+		button:hover {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+		.showName{
+			font-size: 7vw;
+			font-weight: bold;
+			color: #26fd07;
+			margin-top: 50px;
+			font-stretch: 
+		}
+		footer{
+			position: fixed;
+		   	left: 0;
+		  	bottom: 0;
+		  	width: 100%;
+		  	font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<h1>My First Contribution To OpenSource</h1>
+	<button onclick="firstName()">First Name</button>
+	<button onclick="lastName()">Last Name</button>
+	<button onclick="FullName()">FullName</button>
+	<div id="showName" class="showName"></div>
+	<footer><p>Thank for Visting<span> "made by VISHAL RANJAN " with <span style='font-size:40px;'>&#128153;</span></span></p></footer>
+</div>
+<script>
+	const firstName = () =>{
+		var Name = 'Vishal';
+		document.getElementById("showName").innerHTML=Name;
+	}
+	const lastName = () =>{
+		var Name = 'Ranjan';
+		document.getElementById("showName").innerHTML=Name;
+	}
+	const FullName = () =>{
+		var Name = 'Vishal Ranjan';
+		document.getElementById("showName").innerHTML=Name;
+	}
+</script>
+</body>
+</html>
