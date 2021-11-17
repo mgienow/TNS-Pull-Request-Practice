@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <header>
+          <h1>Sign Up</h1>
+        </header>
+        <form>
+          <label for="txtUsername"> Username : </label>
+          <input type="text" id="txtUsername" placeholder="Name goes here.." required autofocus />
+          <br />
+          <label for="txtUserPassword"> Password : </label>
+          <input
+            type="password"
+            id="txtUserPassword"
+            placeholder="Min length 6 chars"
+            minlength="6"
+            required
+          />
+          <br />
+          <label for="txtUserEmail"> Email : </label>
+          <input type="email" id="txtUserEmail" placeholder="something@something.com" />
+          <br />
+          <label for="txtUserDOB"> DoB (type=date)</label>
+          <input type="date" id="txtUserDOB" /> <br />
+          <label for="txtUserDOBPattern"> DoB (pattern)</label>
+          <input
+            type="text"
+            id="txtUserDOBPattern"
+            pattern="\d\d/\d\d/\d\d\d\d"
+            placeholder="dd/mm/yyyy"
+          />
+          <br />
+          <label for="txtAge"> Age : </label>
+          <input type="number" id="txtAge" min="18" max="80" />
+          <br />
+          <label for="txtColor">Color : </label>
+          <input
+            type="color"
+            id="txtColor"
+            onchange="txtUsername.style.backgroundColor=this.value"
+          />
+          <br />
+          <label for="txtRange">Salary : </label>
+          <input
+            type="range"
+            id="txtRange"
+            value="20000"
+            min="10000"
+            max="100000"
+            step="5000"
+            onchange="rangeSalOutput.value = this.value"
+          />
+          <output id="rangeSalOutput"></output>
+          <br />
+          <label for="txtUrl">Url : </label> <input type="url" id="txtUrl" />
+          <br />
+          <label for="txtSearch">Search : </label>
+          <input type="search" id="txtSearch" />
+          <br />
+          <label for="txtAlternateEmail">Alternate Email :</label>
+          <input type="email" id="txtAlternateEmail" list="emailList" />
+
+          <datalist id="emailList">
+            <option value="sumeet@hotmail.com">Hotmail</option>
+            <option value="sumeet@gmail.com">Gmail</option>
+            <option value="sumeet@msn.com">MSN</option>
+          </datalist>
+          <br />
+          <label for="progress">Completed (%)</label>
+          <progress value="40" max="100"></progress>
+
+          <br />
+          Pollution Level :
+          <meter min="10" low="40" max="100" high="70" value="50"></meter>
+          <br />
+          <fieldset>
+            <legend>Billing Info :</legend>
+            House No. : <input type="number" /> <br />
+            Blg No. : <input type="number" /> <br />
+            Street No. : <input type="number" /> <br />
+            Pin Code : <input type="number" /> <br />
+          </fieldset>
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </body>
+    </html>
+  </body>
+</html>
