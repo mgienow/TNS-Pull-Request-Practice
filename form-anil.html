@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <script>
+      function SubmitForm(e) {
+        // biz logic
+        // validations
+        //ajax
+        console.log("Make ajax request here..");
+        e.preventDefault(); // prevents the default action of browser (reloading the page)
+      }
+
+      function SubmitForm_Button() {
+        var theForm = document.getElementById("userForm");
+        theForm.submit(); // sync submit the form
+      }
+    </script>
+  </head>
+  <body>
+    <form id="userForm" action="Handler.php" method="post" onsubmit="SubmitForm(event)">
+      Name : <input type="text" name="txtName" required /> <br />
+      Email : <input type="email" name="txtEmail" /> <br />
+      IsMCT : <input type="radio" name="isMCT" id="rdbYes" value="Yes" />
+      <label for="rdbYes">Yes</label>
+      <input type="radio" name="isMCT" id="rdbNo" value="No" />
+      <label for="rdbNo">No</label>
+      <!-- <input type="submit" value="Submit" /> -->
+      <br />
+      <input type="button" value="Submit" onclick="SubmitForm_Button()" />
+      <input type="reset" value="reset" />
+      <!-- <button>Submit <i class="fas fa-plus-circle"></i></button> -->
+    </form>
+  </body>
+</html>
