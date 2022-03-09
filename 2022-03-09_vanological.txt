@@ -1,2 +1,3 @@
 First commit after cloning repo.
 Second commit after branching out to branch: vanological.
+Third commit after creating pull request to practice Squashing Changes.
