@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Conference Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #3a0ca3;
+      --secondary: #4cc9f0;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #fafafa;
+    }
+    
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, var(--primary), #4361ee);
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary), #4361ee);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .display-4 {
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .lead {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+    
+    .btn-custom {
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+    
+    .btn-light {
+      background: white;
+      color: var(--primary);
+      border: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .btn-light:hover {
+      background: #f8f9fa;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    
+    .feature-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    
+    .feature-card .card-body {
+      padding: 2rem 1.5rem;
+    }
+    
+    .footer {
+      background: var(--dark);
+      padding: 3rem 0;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      margin: 0 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    
+    .social-icons a {
+      color: white;
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <i class="fas fa-globe-americas me-2"></i>VirtualConf
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/login">
+              <i class="fas fa-sign-in-alt me-1"></i> Login
+            </a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link btn btn-light text-primary px-3 py-2" href="/submit">
+              <i class="fas fa-paper-plane me-1"></i> Submit Abstract
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-white text-center">
+    <div class="container hero-content">
+      <h1 class="display-4">Welcome to VirtualConf</h1>
+      <p class="lead mx-auto" style="max-width: 700px;">
+        Connect, share and collaborate at the cutting edge of digital conferences. 
+        A seamless platform designed for researchers and professionals worldwide.
+      </p>
+      <a href="/login" class="btn btn-light btn-custom">
+        Get Started <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5 my-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Why Choose VirtualConf?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card card mb-4 h-100">
+            <div class="card-body text-center">
+              <div class="feature-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3 class="card-title h4 fw-bold">Abstract Submission</h3>
+              <p class="card-text text-muted">
+                Streamlined submission process with smart tracking and reviewer assignment.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card card mb-4 h-100">
+            <div class="card-body text-center">
+              <div class="feature-icon">
+                <i class="fas fa-video"></i>
+              </div>
+              <h3 class="card-title h4 fw-bold">Live Interactions</h3>
+              <p class="card-text text-muted">
+                HD video conferencing, breakout rooms, and real-time Q&A sessions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card card mb-4 h-100">
+            <div class="card-body text-center">
+              <div class="feature-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3 class="card-title h4 fw-bold">Certificates</h3>
+              <p class="card-text text-muted">
+                Automated certificate generation with blockchain verification technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Ready to host your next digital conference?</h2>
+      <p class="lead text-muted mb-4">Join thousands of researchers and professionals already using our platform.</p>
+      <a href="/login" class="btn btn-primary btn-lg px-5">Start Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-white text-center">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="copyright">&copy; 2023 VirtualConf. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
